@@ -1,16 +1,12 @@
 package com.example.practiceservice.service
 
 import com.example.practiceservice.domain.model.CurrentPrice
-import com.example.practiceservice.domain.model.CurrentPriceRequest
 import com.example.practiceservice.domain.model.Stock
 import com.example.practiceservice.domain.repository.CurrentPriceRedisRepository
 import com.example.practiceservice.domain.repository.StockRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.mockito.BDDMockito.given
-import org.mockito.Mock
-import org.mockito.Spy
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 
