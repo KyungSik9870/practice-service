@@ -11,16 +11,18 @@
 - 현재가와 시작가를 비교해서 등락율을 구해야 한다. -> Logic
 
 
-Controller (B')
-Presentation Layer Service (A -> B') - manufacture
------------------------ Service 간의 전송객체
-Domain Layer Service (A) - deliver
-Repository (A)
-
-
-Controller
-Service - deliver & manufacture -> 가져오고 나서 변환 -> test 어려움 -> 완성도있는 프로덕트가 안나옴
+[기존구조]  
+Controller  
+Service - deliver & manufacture -> 가져오고 나서 변환 -> test 어려움 -> 완성도있는 프로덕트가 안나옴  
 Repository
+
+
+[서비스 책임 분리]  
+Controller (B')  
+Presentation Layer Service (A -> B') - manufacture  
+----------------------- Service 간의 전송객체  
+Domain Layer Service (A) - deliver  
+Repository (A)
 
 
 ## [TIP]

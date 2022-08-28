@@ -28,9 +28,9 @@ class StockServiceTest {
     private lateinit var currentPriceRedisService: CurrentPriceRedisService
 
     private val stockList: Map<String, CurrentPrice> = mapOf(
-        "KAKAO" to CurrentPrice(50000.0),
-        "KAKAOPAY" to CurrentPrice(67000.0),
-        "BRAINZ" to CurrentPrice(50000.0),
+        "KAKAO" to CurrentPrice("KAKAO", 50000.0),
+        "KAKAOPAY" to CurrentPrice("KAKAOPAY", 67000.0),
+        "BRAINZ" to CurrentPrice("BRAINZ", 50000.0),
     )
 
     @BeforeEach
@@ -46,6 +46,6 @@ class StockServiceTest {
 
     @Test
     internal fun name() {
-        assertThat(stockService.findStock("KAKAOPAY")).isEqualTo(CurrentPrice(67000.0))
+        assertThat(stockService.findStock("KAKAOPAY")).isEqualTo(CurrentPrice("BRAINZ", 67000.0))
     }
 }

@@ -15,9 +15,9 @@ import org.springframework.context.annotation.Import
 class CurrentPriceRedisServiceTest: BaseRedisTest() {
 
     private val stockList: Map<String, CurrentPrice> = mapOf(
-        "KAKAO" to CurrentPrice(50000.0),
-        "KAKAOPAY" to CurrentPrice(67000.0),
-        "BRAINZ" to CurrentPrice(50000.0),
+        "KAKAO" to CurrentPrice("KAKAO", 50000.0),
+        "KAKAOPAY" to CurrentPrice("KAKAOPAY", 67000.0),
+        "BRAINZ" to CurrentPrice("BRAINZ", 50000.0),
     )
 
     @Autowired
@@ -40,6 +40,6 @@ class CurrentPriceRedisServiceTest: BaseRedisTest() {
         )
 
         assertThat(currentPrices).isNotNull
-        assertThat(currentPrices).isEqualTo(CurrentPrice(50000.0))
+        assertThat(currentPrices).isEqualTo(CurrentPrice("KAKAO", 50000.0))
     }
 }
