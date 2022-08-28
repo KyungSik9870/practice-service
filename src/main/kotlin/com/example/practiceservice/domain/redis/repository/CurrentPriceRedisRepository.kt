@@ -1,6 +1,6 @@
-package com.example.practiceservice.domain.repository
+package com.example.practiceservice.domain.redis.repository
 
-import com.example.practiceservice.domain.model.CurrentPrice
+import com.example.practiceservice.domain.redis.dto.CurrentPrice
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.data.redis.core.HashOperations
 import org.springframework.data.redis.core.RedisTemplate

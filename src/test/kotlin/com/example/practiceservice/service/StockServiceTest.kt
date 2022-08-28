@@ -1,9 +1,11 @@
 package com.example.practiceservice.service
 
-import com.example.practiceservice.domain.model.CurrentPrice
-import com.example.practiceservice.domain.model.Stock
-import com.example.practiceservice.domain.repository.CurrentPriceRedisRepository
-import com.example.practiceservice.domain.repository.StockRepository
+import com.example.practiceservice.api.stock.service.StockService
+import com.example.practiceservice.domain.redis.dto.CurrentPrice
+import com.example.practiceservice.domain.stock.model.Stock
+import com.example.practiceservice.domain.redis.repository.CurrentPriceRedisRepository
+import com.example.practiceservice.domain.redis.service.CurrentPriceRedisService
+import com.example.practiceservice.domain.stock.repository.StockRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test

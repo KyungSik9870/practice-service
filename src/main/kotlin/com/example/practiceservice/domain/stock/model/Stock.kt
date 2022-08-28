@@ -1,4 +1,4 @@
-package com.example.practiceservice.domain.model
+package com.example.practiceservice.domain.stock.model
 
 import com.example.practiceservice.domain.Audit
 import javax.persistence.*

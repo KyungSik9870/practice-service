@@ -1,9 +1,9 @@
 package com.example.practiceservice.redis
 
-import com.example.practiceservice.domain.model.CurrentPrice
-import com.example.practiceservice.domain.model.CurrentPriceRequest
-import com.example.practiceservice.domain.repository.CurrentPriceRedisRepository
-import com.example.practiceservice.service.CurrentPriceRedisService
+import com.example.practiceservice.domain.redis.dto.CurrentPrice
+import com.example.practiceservice.domain.redis.dto.CurrentPriceRequest
+import com.example.practiceservice.domain.redis.repository.CurrentPriceRedisRepository
+import com.example.practiceservice.domain.redis.service.CurrentPriceRedisService
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach

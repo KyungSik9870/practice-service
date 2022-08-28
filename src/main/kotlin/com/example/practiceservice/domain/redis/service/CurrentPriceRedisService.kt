@@ -1,8 +1,8 @@
-package com.example.practiceservice.service
+package com.example.practiceservice.domain.redis.service
 
-import com.example.practiceservice.domain.model.CurrentPrice
-import com.example.practiceservice.domain.model.CurrentPriceRequest
-import com.example.practiceservice.domain.repository.CurrentPriceRedisRepository
+import com.example.practiceservice.domain.redis.dto.CurrentPrice
+import com.example.practiceservice.domain.redis.dto.CurrentPriceRequest
+import com.example.practiceservice.domain.redis.repository.CurrentPriceRedisRepository
 import org.springframework.stereotype.Service
 
 @Service
