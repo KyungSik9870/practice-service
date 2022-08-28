@@ -10,6 +10,6 @@ class CurrentPriceRedisService(
     private val currentPriceRedisRepository: CurrentPriceRedisRepository
 ) {
     fun findCurrentPrice(req: CurrentPriceRequest): CurrentPrice {
-        return currentPriceRedisRepository.get(req.exchange, req.market, req.stock)
+        return currentPriceRedisRepository.get(req.exchange, req.market, req.symbol)
     }
 }

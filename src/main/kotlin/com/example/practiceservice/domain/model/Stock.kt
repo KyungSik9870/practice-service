@@ -10,9 +10,9 @@ class Stock(
     @Column(name = "stock_id")
     val id: Long,
 
-    val stockName: String,
-    val symbol: String,
+    val exchange: String,
     val market: String,
+    val symbol: String,
     val openPrice: Double,
     val endPrice: Double,
     val status: String

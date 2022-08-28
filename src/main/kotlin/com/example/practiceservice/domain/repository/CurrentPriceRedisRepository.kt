@@ -16,14 +16,14 @@ class CurrentPriceRedisRepository(
         redisTemplate.opsForHash()
     }
 
-    fun get(stockName: String, market: String, symbol: String): CurrentPrice {
-        return hashOperations.get("$stockName-$market", symbol)
+    fun get(exchange: String, market: String, symbol: String): CurrentPrice {
+        return hashOperations.get("$exchange-$market", symbol)
             ?.let { objectMapper.readValue(it, CurrentPrice::class.java) }
             ?: throw IllegalArgumentException()
     }
 
-    fun put(stockName: String, market: String, symbol: String, currentPrice: CurrentPrice) {
-        hashOperations.put("$stockName-$market", symbol, objectMapper.writeValueAsString(currentPrice))
+    fun put(exchange: String, market: String, symbol: String, currentPrice: CurrentPrice) {
+        hashOperations.put("$exchange-$market", symbol, objectMapper.writeValueAsString(currentPrice))
     }
 
 }
